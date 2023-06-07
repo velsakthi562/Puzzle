@@ -15,11 +15,6 @@ public class DragObject : MonoBehaviour
         cam = Camera.main;
     }
 
-    void OnMouseDown()
-    {
-       // dragOffset = transform.position - GetMousePos();
-    }
-
     void OnMouseDrag()
     {
         transform.position = Vector3.MoveTowards(transform.position, GetMousePos() + dragOffset, speed * Time.deltaTime);
